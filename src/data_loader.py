@@ -8,8 +8,26 @@ import pandas as pd
 
 from src import config
 
+# Local dataset path (used only on this development machine, if it exists)
+LOCAL_DATASET_PATH = r"D:\Customer Churn Prediction\data\raw\Telco-Customer-Churn Datasets.csv"
 
-def load_raw_data(path: str = config.RAW_DATA_PATH) -> pd.DataFrame:
+
+def _resolve_default_path() -> str:
+    """
+    Prefer the local dev machine's path if it exists; otherwise fall back
+    to the standard relative path (data/raw/...), which is what the repo
+    ships with and what Streamlit Cloud / any other server will have.
+    This means the same code works unmodified on your PC AND after deploy —
+    no need to remember to switch the path back before pushing to GitHub.
+    """
+    if os.path.exists(LOCAL_DATASET_PATH):
+        return LOCAL_DATASET_PATH
+    return config.RAW_DATA_PATH
+
+
+def load_raw_data(path: str = None) -> pd.DataFrame:
+    path = path or _resolve_default_path()
+
     if not os.path.exists(path):
         sys.exit(
             f"\n[ERROR] Raw dataset not found at: {path}\n"

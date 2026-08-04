@@ -5,7 +5,7 @@ Keeping these in one place means every other module just does
 """
 import os
 
-# ---------------------------------------------------------------- paths ----
+# ---------------------------- paths ---------------------------------
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 RAW_DATA_PATH = os.path.join(BASE_DIR, "data", "raw", "WA_Fn-UseC_-Telco-Customer-Churn.csv")
@@ -25,7 +25,7 @@ PREPROCESSOR_ARTIFACT_PATH = os.path.join(MODELS_DIR, "preprocessor.pkl")
 FEATURE_NAMES_PATH = os.path.join(MODELS_DIR, "feature_names.json")
 METRICS_REPORT_PATH = os.path.join(MODELS_DIR, "metrics_report.json")
 
-# ------------------------------------------------------------- constants ---
+# ----------------------------- constants ---------------------------------
 TARGET_COL = "Churn"
 ID_COL = "customerID"
 
@@ -42,7 +42,7 @@ CATEGORICAL_COLS = [
     "Contract", "PaperlessBilling", "PaymentMethod",
 ]
 
-# ---------------------------------------------------------- model params ---
+# -------------------------- model params -------------------------------
 RF_PARAMS = dict(
     n_estimators=300,
     max_depth=10,
