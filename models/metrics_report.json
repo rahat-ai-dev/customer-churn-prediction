@@ -1,0 +1,110 @@
+[
+  {
+    "model": "logistic_regression",
+    "accuracy": 0.7445,
+    "precision": 0.512,
+    "recall": 0.7995,
+    "f1_score": 0.6242,
+    "roc_auc": 0.8445,
+    "confusion_matrix": [
+      [
+        750,
+        285
+      ],
+      [
+        75,
+        299
+      ]
+    ]
+  },
+  {
+    "model": "random_forest",
+    "accuracy": 0.7686,
+    "precision": 0.546,
+    "recall": 0.762,
+    "f1_score": 0.6362,
+    "roc_auc": 0.8419,
+    "confusion_matrix": [
+      [
+        798,
+        237
+      ],
+      [
+        89,
+        285
+      ]
+    ]
+  },
+  {
+    "model": "xgboost",
+    "accuracy": 0.797,
+    "precision": 0.6477,
+    "recall": 0.516,
+    "f1_score": 0.5744,
+    "roc_auc": 0.8396,
+    "confusion_matrix": [
+      [
+        930,
+        105
+      ],
+      [
+        181,
+        193
+      ]
+    ]
+  },
+  {
+    "model": "lightgbm",
+    "accuracy": 0.7686,
+    "precision": 0.5496,
+    "recall": 0.7112,
+    "f1_score": 0.62,
+    "roc_auc": 0.8312,
+    "confusion_matrix": [
+      [
+        817,
+        218
+      ],
+      [
+        108,
+        266
+      ]
+    ]
+  },
+  {
+    "model": "voting_ensemble",
+    "accuracy": 0.7743,
+    "precision": 0.5591,
+    "recall": 0.7086,
+    "f1_score": 0.625,
+    "roc_auc": 0.8447,
+    "confusion_matrix": [
+      [
+        826,
+        209
+      ],
+      [
+        109,
+        265
+      ]
+    ]
+  },
+  {
+    "model": "stacking_ensemble",
+    "accuracy": 0.7942,
+    "precision": 0.6288,
+    "recall": 0.5481,
+    "f1_score": 0.5857,
+    "roc_auc": 0.8426,
+    "confusion_matrix": [
+      [
+        914,
+        121
+      ],
+      [
+        169,
+        205
+      ]
+    ]
+  }
+]
